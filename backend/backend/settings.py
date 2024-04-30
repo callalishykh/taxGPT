@@ -61,9 +61,9 @@ CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 ALLOWED_HOSTS = [
     "127.0.0.1",
-    "taxgpt-backend.onrender.com",
     "localhost:3002",
     ".vercel.app",
+    "taxgpt-h64y.onrender.com",
 ]
 
 ROOT_URLCONF = "backend.urls"

@@ -8,7 +8,7 @@ services:
       - "8000:8000"
     environment:
       - DEBUG=1
-      - OPENAI_API_KEY=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
+      - OPENAI_API_KEY=<key>
   frontend:
     build: ./frontend
     volumes:

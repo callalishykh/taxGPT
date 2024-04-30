@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  backend:
+    build: ./backend
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=1
+      - OPENAI_API_KEY=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
+  frontend:
+    build: ./frontend
+    volumes:
+      - ./frontend:/app
+    environment:
+      - API_BASE_URL=http://127.0.0.1:8000/
+    ports:
+      - "3002:3000"

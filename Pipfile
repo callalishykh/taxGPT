@@ -1,0 +1,32 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+djangorestframework = "*"
+openai = "*"
+requests = "*"
+langchain-openai = "*"
+langchain-community = "*"
+langchain-core = "*"
+langchain = "*"
+networkx = "*"
+matplotlib = "*"
+rest-framework-simplejwt = "*"
+djangorestframework-simplejwt = "*"
+psycopg2 = "*"
+django-cors-headers = "*"
+pymupdf = "*"
+cryptography = "*"
+django-encrypted-filefield = "*"
+
+[dev-packages]
+black = "*"
+
+[requires]
+python_version = "3.12"
+
+[pipenv]
+allow_prereleases = true

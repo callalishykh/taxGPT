@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import axiosInstance from "@/utils/axios";
 
 interface ChatWindowPropsType {
-  activeChatId: number | null;
+  activeChatId: number | null | undefined;
 }
 const ChatWindow = ({ activeChatId }: ChatWindowPropsType) => {
   const [conversation, setConversation] = useState<IMessage[]>([]);

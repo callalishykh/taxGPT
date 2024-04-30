@@ -1,5 +1,5 @@
 interface FileViewerPropsType {
-  activeFile: string;
+  activeFile: string | undefined;
 }
 
 const FileViewer = ({ activeFile }: FileViewerPropsType) => {

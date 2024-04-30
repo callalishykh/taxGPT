@@ -10,8 +10,8 @@ import Loader from "@/components/loader";
 interface SidebarPropsType {
   chats: IChat[];
   setChats: Dispatch<SetStateAction<IChat[]>>;
-  activeChat: IChat;
-  setActiveChat: Dispatch<SetStateAction<IChat>>;
+  activeChat: IChat | null;
+  setActiveChat: Dispatch<SetStateAction<IChat | null>>;
 }
 
 const Sidebar = ({

@@ -52,7 +52,6 @@ axiosInstance.interceptors.response.use(
     if (error.response.status === 401 && !originalRequest._retry) {
       originalRequest._retry = true;
       const newToken = await refreshToken();
-      console.log(newToken, "newTokennewTokennewToken");
 
       if (newToken) {
         axios.defaults.headers.common["Authorization"] = `Bearer ${newToken}`;
@@ -60,6 +59,7 @@ axiosInstance.interceptors.response.use(
         return axiosInstance(originalRequest);
       }
     }
+
     return Promise.reject(error);
   }
 );

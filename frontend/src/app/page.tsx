@@ -6,8 +6,12 @@ import Sidebar from "@/components/sidebar";
 import axiosInstance from "@/utils/axios";
 import { IChat } from "@/utils/types";
 import { useEffect, useState } from "react";
+import Cookies from "js-cookie";
+import { useRouter } from "next/navigation";
 
 const Chat = () => {
+  const router = useRouter();
+
   const [activeChat, setActiveChat] = useState<IChat | null>(null);
   const [chats, setChats] = useState<IChat[]>([]);
 
@@ -21,6 +25,13 @@ const Chat = () => {
   };
   useEffect(() => {
     getAllChats();
+  }, []);
+  useEffect(() => {
+    const token = Cookies.get("token");
+
+    if (!token) {
+      router.push("/login");
+    }
   }, []);
   return (
     <div className='flex overflow-auto w-screen h-screen'>

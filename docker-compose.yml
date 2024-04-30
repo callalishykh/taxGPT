@@ -8,7 +8,12 @@ services:
       - "8000:8000"
     environment:
       - DEBUG=1
-      - OPENAI_API_KEY=<key>
+      - DATABASE_NAME=<name>
+      - DATABASE_USER=<user>
+      - DATABASE_PASSWORD=<password>
+      - DATABASE_HOST=<host>
+      - DATABASE_PORT=<port>
+
   frontend:
     build: ./frontend
     volumes:
